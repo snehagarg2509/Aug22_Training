@@ -1,0 +1,7 @@
+mq_unlink(const char * name)
+Purpose: Removes a named message queue from the system.
+
+
+Parameters:
+name: The name of the message queue to be removed.
+Returns: 0 on success, -1 on failure.

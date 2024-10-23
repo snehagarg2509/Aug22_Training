@@ -1,0 +1,9 @@
+ftruncate()
+Purpose: Sets the size of the shared memory object.
+
+int ftruncate(int fd, off_t length);
+
+
+Parameters:
+fd: File descriptor of the shared memory object (returned by shm_open()).
+length: The desired size of the shared memory segment.

@@ -1,0 +1,13 @@
+mq_receive()
+Purpose: Receives a message from a message queue.
+
+ssize_t mq_receive(mqd_t mqdes, char *msg_ptr, size_t msg_len, unsigned int *msg_prio);
+
+
+Parameters:
+	mqdes: Message queue descriptor.
+	msg_ptr: Buffer to store the received message.
+	msg_len: Size of the buffer.
+	msg_prio: Pointer to store the message priority (can be NULL if not needed).
+
+Returns: Number of bytes received on success, -1 on failure.

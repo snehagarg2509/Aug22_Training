@@ -1,0 +1,11 @@
+shm_open()
+Purpose: Creates or opens a shared memory object.
+
+int shm_open(const char *name, int oflag, mode_t mode);
+
+Parameters:
+name: Name of the shared memory object (e.g., "/my_shared_mem").
+oflag: Flags for opening the object (e.g., O_CREAT, O_RDWR).
+mode: Permissions (e.g., 0644) when creating the object.
+
+Return Value: Returns a file descriptor (fd) for the shared memory object or -1 on failure.

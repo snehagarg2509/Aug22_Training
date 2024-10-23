@@ -1,0 +1,17 @@
+mq_open()
+Purpose: Opens or creates a message queue.
+
+		mqd_t mq_open(const char *name, int oflag, ...);
+
+Parameters:
+	name: The name of the message queue.(starts with /)
+	oflag: Flags to specify behavior (e.g., O_CREAT to create the queue if it doesn't exist).
+       
+      ...  indicates attributes, permission	
+
+   Returns: A message queue descriptor (mqd_t) on success, -1 on failure.
+
+
+Example:
+    mqd_t mq;
+    mq = mq_open("/myqueue", O_CREAT | O_WRONLY, 0644, &attr);

@@ -1,0 +1,6 @@
+shm_unlink()
+Purpose: Removes a shared memory object from the system.
+
+
+int shm_unlink(const char *name);
+

@@ -1,0 +1,18 @@
+mmap()
+Purpose: Maps the shared memory object into the process's address space.
+
+
+void *mmap(void *addr, size_t length, int prot, int flags, int fd, off_t offset);
+
+
+
+Parameters:
+addr: Starting address for mapping (usually NULL for auto-selection).
+length: Size of the memory region to map.
+prot: Memory protection options (e.g., PROT_READ | PROT_WRITE).
+flags: Mapping options (e.g., MAP_SHARED to share changes with other processes).
+fd: File descriptor of the shared memory object.
+offset: Offset from which to start the mapping (usually 0).
+
+
+Return Value: Returns a pointer to the mapped region or MAP_FAILED on error.

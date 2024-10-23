@@ -1,0 +1,21 @@
+struct mq_attr
+
+
+struct mq_attr {
+    long mq_flags;    // Message queue flags
+    long mq_maxmsg;   // Maximum number of messages
+    long mq_msgsize;  // Maximum message size
+    long mq_curmsgs;  // Number of messages currently in queue
+};
+
+
+    struct mq_attr attr;
+
+ // Set message queue attributes
+    attr.mq_flags = 0;
+    attr.mq_maxmsg = 10;
+    attr.mq_msgsize = 1024;
+    attr.mq_curmsgs = 0;
+
+each when the sender sends or receiver recieves the messages mq_curmsgs will be updated.
+

@@ -1,0 +1,10 @@
+ munmap()
+Purpose: Unmaps the shared memory segment from the process's address space.
+
+
+int munmap(void *addr, size_t length);
+
+
+Parameters:
+addr: Starting address of the memory region to unmap. (use the one you get in mmap)
+length: Size of the memory region to unmap.

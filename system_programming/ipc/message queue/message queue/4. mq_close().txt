@@ -1,0 +1,8 @@
+4. mq_close()
+Purpose: Closes the message queue.
+
+int mq_close(mqd_t mqdes);
+
+Parameters:
+mqdes: Message queue descriptor to be closed.
+Returns: 0 on success, -1 on failure.

@@ -1,0 +1,22 @@
+mq_send()
+Purpose: Sends a message to a message queue.
+
+int mq_send(mqd_t mqdes, const char *msg_ptr, size_t msg_len, unsigned int msg_prio);
+
+Parameters:
+	mqdes: Message queue descriptor returned by mq_open.
+	msg_ptr: Pointer to the message to be sent.
+	msg_len: Length of the message.
+	msg_prio: Priority of the message (0 is the lowest priority).
+
+Returns: 0 on success, -1 on failure.
+
+
+
+ex 
+int retval;
+char buffer[] = "Hello form sender";
+ret_val = mq_send(mq, buffer, stlen(buffer), 0);
+
+
+will go the queue
