@@ -1,0 +1,27 @@
+CC = gcc
+CFLAGS = -Wall -g -Werror -o
+LDFLAGS = -c
+ 
+SRC = ./src
+OBJ = ./object
+INC = ./include
+BIN = ./bin
+ 
+IFLAGS = -I $(INC)
+ 
+ 
+all: $(OBJ)/main.o $(OBJ)/myFunctions.o
+	$(CC) $(CFLAGS)  $(BIN)/calc $(OBJ)/main.o $(OBJ)/myFunctions.o
+$(OBJ)/main.o: $(SRC)/main.c
+	$(CC) $(LDFLAGS) $(SRC)/main.c $(IFLAGS)
+$(OBJ)/myFunctions.o: $(SRC)/myFunctions.c
+	$(CC) $(LDFLAGS) $(SRC)/myFunctions.c $(IFLAGS)
+	mv *.o $(OBJ)
+ 
+clean: 
+	rm $(OBJ)/*.o
+	rm $(BIN)/calc
+	echo "Successfully deleted"
+
+
+To Run make script :  make -f <makefile-name> [target]

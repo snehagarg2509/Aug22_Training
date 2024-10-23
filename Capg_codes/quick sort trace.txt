@@ -1,0 +1,49 @@
+index  		0		1		2		3		4		5		6
+Elements	8		3		7		1		9		5		2
+			left												right
+			loc
+step1 compare right ele with pivot (2 with 8 as  2 is smaller than 8 ie. right element is smaller than pivot, exchange and set the loc to point the pivot element)
+
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		9		5		8
+			left												right
+															loc
+step2 compare left ele with pivot (2 with 8 as  2 is smaller than 8 ie. left element is smaller than pivot, no exchange move left pointer forward)
+
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		9		5		8
+					left										right
+															loc
+same happens in case of 3, 7, 1 I.,e step 3,4,5
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		9		5		8
+											left				right
+															loc 
+Now in step 6 compare left ele with pivot (9 with 8 as 9 is larger than 8 ie. left element is larger than pivot, exchange and set the loc to point to the pivot element)
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		8		5		9
+											left				right
+											loc 
+step7 compare right ele with pivot(9 with 8 9 is larger i.e right element is larger than pivot, no exchang move the right pointer backward)
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		8		5		9
+											left		right
+											loc 
+step8 : compare right ele with pivot(5 with 8 5 is smaller i.e right element is smaller than pivot, exchang move the loc to point to the pivot element)
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		5		8		9
+											left		right
+													loc 
+step9: compare left ele with pivot (5 with 8 as  5 is smaller than 8 ie. left element is smaller than pivot, no exchange move left pointer forward)
+index  		0		1		2		3		4		5		6
+Elements	2		3		7		1		5		8		9
+													left		
+													right
+													loc 
+ cant continue because left == loc so return loc ,, which is the correct loction of pivot. if you observe now all elements towards left are smaller than  8 and towards right are greater than 8.
+
+
+
+
+
+

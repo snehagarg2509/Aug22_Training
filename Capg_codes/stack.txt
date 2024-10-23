@@ -1,0 +1,689 @@
+/*******************************************************************************
+
+*
+
+*     FILENAME       :    stack_functions.c
+
+*
+
+*     DESCRIPTION    :    This file defines the various functions on stack.
+
+*
+
+*     Revision History    :
+
+*     DATE        NAME                  REFERENCE            REASON
+
+*     ----------------------------------------------------------
+ 
+*     
+
+*
+
+*******************************************************************************/
+ 
+#include <stdio.h>
+
+#include <stdlib.h>
+
+/********************** Macro definitions *************************************/
+
+# define SUCCESS 1
+
+# define FAILURE 0
+
+# define STACKSIZE 5
+
+# define END -1
+
+# define START 0
+ 
+/********************** Function Declaration **********************************/
+
+int isempty(int);
+
+int overflow(int);
+
+int push(int [], int *, int);
+
+int pop(int [], int *);
+
+int peep(int [], int);
+
+void display(int [], int);
+ 
+ 
+int isempty(int top)
+
+{
+
+    if (END== top)
+
+    {
+
+        return SUCCESS; /* Stack is empty */
+
+    }
+
+    else
+
+    {
+
+        return FAILURE; /* Stack is not empty */
+
+    }
+
+}
+ 
+/*****************************************************************************
+
+*     FUNCTION NAME   : overflow
+
+*
+
+*     DESCRIPTION     :  This function checks whether the Stack is full or not
+
+*
+
+*     RETURNS         : SUCCESS if stack is full,
+
+*                       FAILURE if stack is not full
+
+*****************************************************************************/
+
+int overflow(int top)
+
+{
+
+    if (STACKSIZE -1 == top)
+
+    {
+
+        return SUCCESS; /* Stack Full */
+
+    }
+
+    else
+
+    {
+
+        return FAILURE; /* Stack not full */
+
+    }
+
+}
+ 
+/*****************************************************************************
+
+*     FUNCTION NAME :    push
+
+*
+
+*     DESCRIPTION   :This function inserts a new item at the top of the stack
+
+*
+
+*     RETURNS         : nothing
+
+*
+
+*****************************************************************************/
+
+int push(int stack[], 
+
+          int *top, 
+
+          int value) /* Parameter for the item to be inserted */
+
+{
+
+    if (overflow(*top))
+
+    {
+
+        printf("\n Stack overflow\n");
+
+        return FAILURE;
+
+    }
+
+        /* Insert if stack size is not full */
+
+        *top += 1;
+
+        stack[*top] = value;
+
+    return SUCCESS;
+
+}
+ 
+/*****************************************************************************
+
+*     FUNCTION NAME   :    pop
+
+*
+
+*     DESCRIPTION     :This function deletes an item from the top of the stack
+
+*
+
+*     RETURNS         : FAILURE, if item is not deleted
+
+*                       temp, the item which is deleted
+
+*****************************************************************************/
+
+int pop(int stack[], int *top)
+
+{
+
+    int item; /* Variable to store the item which is deleted */
+ 
+    /* Check if stack is empty or not */
+
+    if (isempty(*top))
+
+    {
+
+        printf("\nStack Underflow\n");
+
+        return FAILURE;
+
+    }
+ 
+    item = stack[*top];
+
+    *top -= 1;
+
+    return item;
+
+}
+ 
+/*****************************************************************************
+
+*     FUNCTION NAME   :    peep
+
+*
+
+*     DESCRIPTION     :This function returns item from the top of the stack
+
+*
+
+*     RETURNS         : FAILURE, if stack is empty 
+
+*****************************************************************************/
+
+int peep(int stack[], int top)
+
+{
+
+    int item; /* Variable to store the item which is deleted */
+ 
+    /* Check if stack is empty or not */
+
+    if (isempty(top))
+
+    {
+
+        printf("\nStack Underflow\n");
+
+        return FAILURE;
+
+    }
+ 
+    item = stack[top];
+ 
+    return item;
+
+}
+ 
+/***************************************************************************
+
+*     FUNCTION NAME   :    display
+
+*
+
+*     DESCRIPTION     :This function displays the data in the stack
+
+*
+
+*     RETURNS         : nothing
+
+*
+
+*****************************************************************************/
+
+void display(int stack[], int top)
+
+{
+
+    int counter;
+
+    /* Check if stack is empty or not */
+ 
+    if (isempty(top))
+
+    {
+
+        printf("\nThe stack is empty\n");
+
+    }
+
+    else
+
+    {
+
+        /* Display the items in the stack */
+
+        printf("\n The items in stack are \n");
+
+        for (counter = top; counter >= START; counter--)
+
+        {
+
+            printf("\n%d",stack[counter]);
+
+        }
+
+        printf("\n");
+
+    }
+
+}
+ 
+int main()
+
+{
+
+    int stack[STACKSIZE];
+
+    int top = -1;
+
+    int ch;
+
+    int item;
+
+    while(1)
+
+    {
+
+            //system("clear");
+
+            printf("1.Push\n");
+
+            printf("2.pop\n");
+
+            printf("3.peep\n");
+
+            printf("4.Display\n");
+
+            printf("5.Exit\n");
+
+            printf("Enter your choice:  ");
+
+            scanf("%d", &ch);
+
+            switch(ch) 
+
+            {
+
+            case 1: printf("ENter the element to be pushed\n");
+
+                    scanf("%d", &item);
+
+                    if(push(stack ,&top, item)==SUCCESS)
+
+                    {
+
+                        printf("Item pushed successfully\n");
+
+                    }
+
+                    break;
+
+            case 2: item=pop(stack ,&top);
+
+                    if(item!=FAILURE)
+
+                    {
+
+                        printf("Item popped is %d\n", item);
+
+                    }
+
+                    break;
+
+            case 3: item=peep(stack ,top);
+
+                    if(item!=FAILURE)
+
+                    {
+
+                        printf("The top item is  %d\n", item);
+
+                    }
+
+                    break;
+
+            case 4: display(stack , top);
+
+                    break;
+
+            case 5: exit(SUCCESS);
+
+            }
+
+    }
+
+}
+ 
+=================================================================================================
+
+#include <stdio.h>
+
+#include<string.h>
+
+#include<stdlib.h>
+
+#define SIZE 25
+
+#define SUCCESS 0
+
+#define FAILURE 1
+
+typedef struct Node
+
+{
+
+	char *str;
+
+	struct Node *next;
+
+}Node;  
+
+void myfflush(void)
+
+{
+
+    while('\n' != getchar());
+
+}
+
+void get_string_input(char *input)
+
+{
+
+	while(1)
+
+	{
+
+		fgets(input,SIZE-1, stdin);
+
+		int len = strlen(input);
+
+		if(len == 1)
+
+		{	
+
+			printf("\t Empty String, enter again:  ");
+
+			memset(input, 0, SIZE);
+
+			continue;
+
+		}
+
+		if(input[len-1] == '\n')
+
+		{
+
+			input[len-1] ='\0';
+
+		}
+
+		else
+
+		{
+
+			myfflush();
+
+		}
+
+		break;
+
+	}
+
+}
+
+int create_node(Node **new_node, int data_len)
+
+{
+
+    *new_node = (Node *)malloc(sizeof(Node));
+
+     if (NULL == *new_node)
+
+     {
+
+         perror("error while creating node");
+
+         return FAILURE;
+
+     }
+
+    (*new_node)->str = (char *)calloc(data_len, sizeof(char));
+
+    if (NULL == (*new_node)->str)
+
+    {
+
+         perror("error while creating node, allocating memory for str");
+
+         return FAILURE;
+
+    }
+
+    (*new_node)->next = NULL;
+
+    return SUCCESS;
+
+}
+
+int push(Node **head, char *str)
+
+{
+
+    Node *new_node = NULL;
+
+    if (FAILURE == create_node(&new_node, strlen(str) + 1))
+
+    {
+
+        return FAILURE;
+
+    }
+
+    strcpy(new_node->str, str);
+
+    new_node->next = *head;
+
+    *head = new_node;
+
+    return SUCCESS;
+
+}
+
+int pop(Node **head)
+
+{
+
+    Node *tmp = *head;
+
+    if(NULL == tmp)
+
+    {
+
+        printf("\tList is empty, deletion failed");
+
+        return FAILURE;
+
+    }
+
+    *head = (*head)->next;
+
+    free(tmp->str);
+
+    free(tmp);
+
+    return SUCCESS;
+
+}
+
+ 
+void display_list(Node *head)
+
+{
+
+    if (NULL == head)
+
+    {
+
+        printf("\tList is empty\n");
+
+        return ;
+
+    }
+
+    else
+
+    {
+
+        printf("\tElements in list are:\n");
+
+    while(head != NULL)
+
+    {
+
+        printf("\t%s\n", head->str);
+
+        head = head->next;
+
+    }
+
+}
+
+}
+
+
+void free_list(Node **head)
+
+{
+
+    Node *tmp = *head;
+
+    while (tmp != NULL)
+
+    {
+
+       Node *free_node = tmp;
+
+       tmp = tmp->next;
+
+       free(free_node->str);
+
+       free(free_node);
+
+    }
+
+    *head = NULL;
+
+}
+
+
+
+int main()
+
+{
+
+    Node *TOP = NULL;
+
+    while (1)
+
+    {
+
+        //system("clear");
+
+        int choice = 0;
+
+        char str[SIZE];
+
+        memset(str, 0, SIZE);
+
+        printf("\n**************Stack Operation******************\n\n");
+
+        printf("\t1.Push");
+
+        printf("\t2.pop");
+
+        printf("\t3. Display\n");
+
+        printf("\t4. Exit\n\n");
+
+        printf("\tEnter your choice: ");
+
+        scanf("%d", &choice);
+
+        myfflush();
+
+        switch(choice)
+
+        {
+
+            case 1:
+
+                printf("\tenter string: ");
+
+                get_string_input(str);
+
+                if (SUCCESS == push(&TOP, str))
+
+                {
+
+                    printf("\tInserted Successfully\n");
+
+                }
+
+                break;
+
+             case 2:
+
+                if (SUCCESS == pop(&TOP))
+
+                {
+
+                    printf("\tDeleted Successfully\n");
+
+                }
+
+                break;
+
+           case 3:
+
+                display_list(TOP);
+
+                break;
+
+            case 4:
+
+                free_list(&TOP);
+
+                printf("\texited\n");
+
+                return SUCCESS;
+
+        }
+
+    }
+
+}
+ 
