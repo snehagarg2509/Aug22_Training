@@ -1,0 +1,344 @@
+=================================================================================================================================================								
+											BASIC QUES		
+
+
+1. Write a program to perform simple arithmetic operation on two integers.
+
+2. To calculate Area and Circumference of a circle
+
+3. write a  C program that performs temperature conversions between Celsius to Fahrenheit.
+ 
+4. Write a program that uses the ternary operator (?:) to find the maximum of two numbers.
+ 
+5. Extend the program to find the maximum of three numbers using nested ternary operators.
+ 
+6. Write a program that calculates the Body Mass Index (BMI) based on user input for weight (in kg) and height (in meters). (Formula bmi =weight/(height * height).
+
+7. Implement a small C program that performs the following tasks:
+	Read an integer representing the student score.
+	Read a character representing the Student Grade (A, B, C, D, or F).
+	Print Your score is 90 and Grade is A.
+
+==========================================================================================================================================
+
+											IF - ELSE / SWITCH
+
+
+1. program to find given number is Odd or Even
+2. program to find largest of three numbers
+ 
+ 
+3. Write a program that takes a score (0-100) as input from the user and uses if statements to determine the corresponding grade:
+90-100: A
+80-89: B
+70-79: C
+60-69: D
+Below 60: F
+Print the grade.
+ 
+4. Temperature Advice:
+Write a program that takes a temperature value as input and uses if statements to print advice based on the temperature:
+Above 30: "It's hot outside, stay hydrated!"
+Between 20 and 30: "The weather is nice and warm."
+Between 10 and 19: "It's a bit chilly, wear a jacket."
+Below 10: "It's cold outside, stay warm!"
+ 
+5. BMI Calculator:
+Extend BMI program and Use if statements to classify the BMI into categories:
+Below 18.5: Underweight
+18.5 to 24.9: Normal weight
+25 to 29.9: Overweight
+30 and above: Obesity
+
+6. Write a C program that takes a percentage input from the user and prints the corresponding grade based on the following criteria:
+>= 90: Grade A
+>= 80: Grade B
+>= 70: Grade C
+>= 60: Grade D
+< 60: Fail
+ 
+7. Write a C program that takes an integer input from the user and prints whether it is positive, negative, or zero.
+ 
+8. Write a C program that reads a character from the user and checks whether it is a vowel (a, e, i, o, u) or a consonant using a switch statement.
+ 
+9. Write a C program that simulates a simple calculator using a switch statement. The user should input two numbers and an operator (+, -, *, /) and the program should print the result.
+ 
+10. Write a program that converts time in minutes to time in hours and minutes. Use #define or const to create a symbolic constant for 60.
+ 
+11. Write a program that asks the user to enter the number of days and then converts that value to weeks and days. For example, it would convert 18 days to 2 weeks, 4 days. 
+      Display results in the following format: 18 days are 2 weeks, 4 days.
+
+======================================================================================================================================================
+
+										     LOGIC BUILDING QUES
+
+
+1. Write a program that prompts the user for a positive integer and then computes the sum of all the digits of the number. For example, if the user enters 2784, then the program reports 21. 
+    If the user enters 59, then the program reports 14. The program should work for any number having one to ten digits.
+
+2. Write a program that prompts the user for a positive integer and then reports the closest integer having a whole number square root. For example, if the user enters 8, then the program reports 9.
+     If the user enters 18, then the program reports 16.The program should work  for any number having one to seven digits.
+
+3. C program to check if a number is an automorphic number (a number whose square ends in the same digits as the number itself).
+Example:
+Consider the number 76.
+1. Calculate the square of the number:
+      76*76=5776
+2. Determine the number of digits in the original number:
+	Number of digits in 76 is 2.
+3. Therefore extract the last 2 digits from the square: (mod of 10 to the power 2)
+       5776 mod 100 = 76
+4. Compare the extracted digits with the original number:
+	Extracted digits: 76
+	Original number: 76
+Since the extracted digits (76) match the original number (76), 76 is an automorphic number.
+
+4. Write a C program to determine whether a given positive integer is an Armstrong number. An Armstrong number (also known as a narcissistic number or pluperfect number) is a number that is equal to the sum 
+    of its own digits each raised to the power of the number of digits. Your program should:
+
+i. Prompt the user to enter a positive integer.
+ii. Determine the number of digits in the number.
+iii. Calculate the sum of each digit raised to the power of the total number of digits.
+iv Compare the calculated sum to the original number to determine if it is an Armstrong number.
+v. Print "Armstrong number" if the number is an Armstrong number, otherwise print "Not an Armstrong number".
+
+====================================================================================================================================================
+
+											  	ARRAYS
+
+
+1. Write a program to read and print array elements( using index and using address)
+2. Write a program to initialize an array with the first 10 natural numbers and print the elements.
+3. Write a program to find the maximum and minimum elements in an array of integers.
+4. Write a program to calculate the sum and average of elements in an array.
+5. Write a program to reverse the elements of an array.
+6. Write a program to search for a specific element in an array and print its index if found.
+7. Write a program to sort an array of integers in ascending order.
+8.Write a program to merge two arrays into a single array.
+9. Write a program to count the occurrences of each element in an array.
+10.Write a program to remove duplicate elements from an array.
+11. Write a program to find the second largest element in an array.
+12. Write a program to check if an array is a palindrome.
+13. Write a program to find the transpose of a given 2D array (matrix).
+
+========================================================================================================================================================
+
+											STRINGS (LEVEL: EASY)
+
+
+1. WAP to get the position of a substring in a string
+2. WAP to reverse the given string
+3. WAP to reverse the given line
+4. Write a program to remove duplicate characters from a string.
+5. Write a program to check if two strings are anagrams of each other.
+6. Write a program to check if a given string is a palindrome or not.
+7. Write a program to sort an array of strings in lexicographic (dictionary) order.
+
+==========================================================================================================================================================
+
+											STRINGS (LEVEL: MEDIUM)
+
+
+1. You are given a string, str.
+	You need to find the score of str as per the following rules:
+	1) For each palindrome of length 4 in str, add 5 to the score
+	2) For each palindrome of length 5 in str, add 10 to the score
+ 
+It is given that palindromes can overlap within str. However, the characters of the palindrome must be continuous and must NOT be circular (i.e. they must NOT wrap around the end of the string.
+ 
+Output the final value of score.
+ 
+Notes:
+• A palindrome is a word, phrase, or sequence that reads the same backwards as forwards. Examples of palindromes are words like "madam", "racecar", "abCba" and "aBccBa", and "ABBA"
+• Palindromes are case-sensitive in this problem (e.g. "Madam" and "ABCcba" are NOT palindromes)
+• The score is initially 0
+• There are no whitespaces in str.
+ 
+2. Write a C program to remove from last occurrence of a word in given string
+
+Example
+ 
+Input
+ 
+Input string: I am a programmer. I learn at Codeforwin.
+Input word to remove: I
+Output
+ 
+String after removing last occurrence of 'I':
+I am a programmer.  learn at Codeforwin
+ 
+ 
+3. Write a C program to replace first occurrence of a character with another character in a string.
+
+Example
+ 
+Input
+ 
+Input string: I love programming.
+Input character to replace: .
+Input character to replace with: !
+ 
+Output
+ 
+String after replacing '.' with '!': I love programming!
+ 
+======================================================================================================================================================
+
+											STRUCTURES
+
+
+1. Write a program to define a structure called Student with members: name, age, and grade. Create an instance of this structure and take input from the user for each member, then print the values.
+2. Create a structure Book with members: title, author, and price. Create an array of 5 books and take input from the user for each book's details. Finally, print the details of all books.
+3. Create a structure Employee with members id, name, and salary. Write a function that takes an employee structure as an argument and prints its members.
+4. Define a structure to hold the product sales information, structure will contain the product_ID and total_sales_amount. 
+	Write a program that accepts multiple product records (product_ID and total_sales_amount) and prints them in decreasing order of total_sales_amount.
+	In case there are multiple records pertaining to the same product_id, the program should choose a single record containing the highest total_sales_amount.
+	Program should take multiple line input.
+	Each subsequent line of input will contain a Product record, that is, a product_ID and total_sales_amount(separated by a hyphen). 
+	The output should consist of the combination of product_ID and corresponding total_sales_amount in decreasing order of score.
+Sample Input:
+P1001-200
+P1002-150
+P1003-300
+P1001-100
+P1002-200
+P1003-50
+P1001-50
+P1002-250
+Sample Output:
+P1003-300
+P1002-250
+P1001-200
+
+==========================================================================================================================================================
+
+											STRINGS (PIPE SEPARATED)
+
+
+1. Write a program that removes duplicate words from a pipe-separated string.
+For example, the input apple|orange|banana|apple|grape should return apple|orange|banana|grape.
+ 
+2. Write a program that Finds the unique words from a pipe-separated string.
+ 
+3. Write a program that sorts the words by their length in ascending order in a pipe-separated string.
+ 
+4. Write a program that reverses each individual word in a pipe-separated string while keeping the original order of words. For example, the input apple|banana|grape should return elppa|ananab|eparg.
+ 
+5. Write a program that splits a pipe-separated string into words and reverses the order of the words. For example, the input apple|banana|grape|orange should return orange|grape|banana|apple.
+ 
+=============================================================================================================================================================
+
+											STRINGS (LEVEL: HARD)
+
+ 
+1. Delete Alternating Characters
+	Given a string s, delete alternating characters from the string to form a new string. For example, delete the second, fourth, sixth, etc., characters.
+	Example:
+			Input: s = "abcdef"
+			Output: "ace"
+ 
+2.  Remove Duplicate Consecutive Characters
+	Given a string s, remove consecutive duplicate characters until no consecutive duplicates remain. For example, from "abbaccd", remove "bb" and "cc" in separate operations.
+	Example:
+		Input: s = "abbaccd"
+		Output: "d"
+ 
+Initial String: "abbaccd"
+First Pass:
+	Find and remove "bb".
+	The string becomes "aaccd".
+Second Pass:
+	Find and remove "aa".
+	The string becomes "ccd".
+Third Pass:
+	Find and remove "cc".
+	The string becomes "d".
+Final String: "d"
+ 
+ 
+3 Given a string s, delete pairs of consecutive vowels (like "ae", "io", etc.). Return the number of deletions made.
+Example:
+Input: s = "beautiful"
+Output: 1 (deletes "ea")
+ 
+ 
+4.  Check if All Words Are Anagrams
+		Input comma seperated words and, check if all the words are anagrams of each other. Return true if they are, otherwise false.
+Example:
+Input: ["dusty", "study", "dust", "stydy"]
+Output: false
+ 
+5.  Given a list of words, find all words that are unique (neither anagrams nor identical to any other word in the list).
+Example:
+Input: ["listen", "silent", "hello", "world", "abc", "cba"]
+Output: ["hello", "world"]
+ 
+6 Write a program that takes two comma-separated lists of integers and finds which integer from the first list has the highest occurrence in the second list. Print that integer and its count.
+Sample input:
+Enter the first list of integers (comma-separated):  5, 3, 4,6
+Enter the second list of integers (comma-separated):  5,4,2,1,4,3,3,2,5,3
+Sample Output
+3-3
+ 
+7 Write a program that takes two comma-separated lists of integers as input. For each integer  N in the first list, calculate the sum of its occurrences in the second list and print  N−S for each integer.
+Sample input:
+ 
+Enter the first list of integers (comma-separated):  5, 3, 4,6
+Enter the second list of integers (comma-separated):  5,4,2,1,4,3,3,2,5,3
+ 
+Sample Output
+ 
+5-10
+4-8
+3-9
+6-0
+
+======================================================================================================================================================
+
+											TEST QUESTIONS
+
+
+Q1. Input 2 arrays, merge them and remove even numbers in the merged array. Sort and print.
+Q2. Take n lines of input, input a character, input a word(string), then search that character and word in each line, print the position for each line and sum of position.
+Q3. Input an array with n elements from 1,2,3.........n. Find the missing elements. (if n = 10, then from 1-10).
+Q5. Input sentence and capitalise last letter in each word.
+Q6. Input a word and delete adjacent duplicate characters.
+
+===============================================================================================================================================
+
+											DSA QUESTIONS
+
+
+1. Implement STACK to perform the below operations using arrays.
+a. push
+b. pop
+c. display
+2. Implement QUEUE to perform the below operations using arrays.
+a. enqueue
+b. dequeue
+c. display
+3. Implement circular queue using arrays.
+4. Implement Single Linked List
+5. Implement Double Linked List.
+6. Implement Circular Single Linked List
+7. Implement Circular Double Linked List
+8. Operation to be performed on SLL and DLL:
+a. Insertion -
+1. Insert at the beginning
+2. Insert at the end
+3. Insert at a given position
+4. Insert before a given position
+5. Insert after a given position
+6. Insert before a given number
+7. Insert after a given number
+8. Insert at the middle
+9. Insert at penultimate node.( The term "penultimate node" refers to the second-to-last node in a linked list. Example head -> Node1 -> Node2 -> Node3 -> Node4 -> NULL  
+    The penultimate node in this list is Node3 because it is the node right before the last node (Node 4)
+b. Deletion -
+The above operations 8.1-8.9 on SLL and DLL has to be implemented on Deletion
+9. WAP to create a linked list of n nodes & copy the contents of the list to a file format_data.db. The number n and file name should be passed from command line.
+10. Write a complimentary program to program 9 which will read the contents from the format_data.db, recreate linked list and print the content of the linked list on to stdout.
+
+===============================================================================================================================================
+
+										
