@@ -1,0 +1,69 @@
+===============================================================================================================================================
+									
+											FORK QUESTIONS
+
+
+1. Write a program that uses fork to create a child process. The child process should print "Hello from child!" and the parent process should print "Hello from parent!".
+
+ 
+2. Write a program that creates n child processes using fork, where n is provided as a command-line argument. Each child process should print its process ID (PID) and its parent's PID. 
+    The parent process should wait for all children to complete before printing "All children have terminated."
+ 
+3. Create a program that calculates the sum of elements in an array using multiple processes. The array and its size should be passed as command-line arguments. Use fork to split the work among child processes,
+    and each child should compute a portion of the sum. The parent process should then compute the final sum from the results of its children.
+
+================================================================================================================================================
+
+												SIGNALS
+
+
+1. Write a program that catches the SIGINT signal (triggered by Ctrl+C) and prints a custom message. Ensure that the program does not terminate when SIGINT is received but continues running.
+ 
+2. Modify the previous program to handle both SIGINT and SIGTERM signals. Print a different message for each signal and terminate the program only when SIGTERM is received(use only one sighandler for 
+    both SIGINIT and SIGTERM).
+ 
+3. Write a program that ignores the SIGINT signal. Test the program to ensure that pressing Ctrl+C does not interrupt its execution.(Hint use signal(SIGINT, SIG_IGN) to ignore SIGINT)
+ 
+4. Write a program that uses the alarm function to send a SIGALRM signal to itself after 5 seconds. Write a signal handler for SIGALRM that prints a message when the alarm goes off.
+ 
+5. Write two programs: one that sends a SIGUSR1 signal to another process and one that handles the SIGUSR1 signal. Use the kill function to send the signal and demonstrate communication between the two programs.
+
+================================================================================================================================================
+
+												    PIPES
+
+
+1.Write a program where the parent process sends a string message to the child process through a pipe. The child process should read the message and print it to the console.
+ 
+2.Create a parent and child process that communicate bidirectionally using two pipes. The parent sends a message to the child, and the child sends a modified version of the message back to the parent.
+ 
+3.Create a program that reads data from a file and sends it through a pipe to another process, which writes the data to another file.
+ 
+4.Write a program that sets up a pipe for communication between parent and child processes. Implement error handling to check if the pipe creation, fork, and read/write operations are successful. If any error occurs, 
+    print an appropriate error message.
+ 
+5. Write a program where the parent process sends data to the child process through a pipe. The parent process waits for a signal from the child process before sending the next chunk of data.
+
+================================================================================================================================================
+
+											      MESSAGE QUEUES
+
+1. Implement a system with multiple producer processes and multiple consumer processes. Each producer generates messages and sends them to a single message queue. Each consumer reads messages from the queue 
+    and processes them.
+ 
+2.  Implement a system with multiple producer processes and multiple consumer processes. Each producer generates messages and sends them to a single message queue. Each consumer reads messages from the queue 
+     and processes them.
+
+================================================================================================================================================
+
+											      SHARED MEMORY
+
+1. Write a program that creates a shared memory segment, writes a message to it, and then another program reads and prints that message.
+ 
+2. Extend the previous program to synchronize the access to the shared memory using POSIX semaphores.
+ 
+3. Create a system where multiple writer processes write messages to the shared memory and multiple reader processes read messages from the shared memory in a synchronized manner.
+ 
+4. Write a program that reads data from a file and writes it to shared memory. Another program should read the data from shared memory and write it to another file.
+
+================================================================================================================================================
